@@ -44,6 +44,7 @@ function App() {
             alignItems: "flex-start",
           }}
         >
+          {/* get all expenses for a perticular budget */}
           {budgets.map((budget) => {
             const amount = getBudgetExpenses(budget.id).reduce(
               (total, expense) => total + expense.amount,
@@ -72,6 +73,7 @@ function App() {
           <TotalBudgetCard />
         </div>
       </Container>
+
       <AddBudgetModal
         show={showAddBudgetModal}
         handleClose={() => setShowAddBudgetModal(false)}
